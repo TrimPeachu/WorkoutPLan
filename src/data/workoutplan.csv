@@ -1,0 +1,44 @@
+﻿id,week,split,day,exercise,warm_up,sets,reps,rpe,alternative_1,alternative_2
+1,1,Push,1,Bench Press,3-4,1,3-5,8-9,DB Bench Press,Machine Chest Press
+2,1,Push,1,Larsen Press,0,2,10,8-9,DB Bench Press no leg,Machine chest press no leg
+3,1,Push,1,Standing Dumbbell Arnold Press,2,3,8-10,8-9,Seated DB Shoulder Press,Machine Shoulder Press
+4,1,Push,1,A1. Press-Around,1,2,12-15,8-9,DB Flye,Deficit Push-up
+5,1,Push,1,A2. Pec Static Stretch 30s,0,2,30s,,,
+6,1,Push,1,Cross-Body Cable Y-Raise,1,3,12-15,9-10,DB Lateral Raise,Machine Lateral Raise
+7,1,Push,1,Triceps pressdown + extension,1,3,8+8,9-10,Tricep Pressdown (12-15 reps),DB Skullcrusher (12-15 reps)
+8,1,Push,1,N1-Style Cross-Body Triceps Extension,0,2,10-12,10,Single-Arm Tricep Pressdown,Single-Arm Cable Tricep Kickback
+9,1,Pull,1,Lat Pulldown,0,4,10,,Pull-up,Machine Pulldown
+10,1,Pull,1,Lat Pulldown (Failure),0,1,10+5,10,Pull-up,Machine Pulldown
+11,1,Pull,1,Omni-Grip Machine Row,2,3,10-12,9-10,Incline Chest-Supported DB Row,Cable seated row
+12,1,Pull,1,A1. Bottom-Half DB Lat Pullover,1,2,10-12,9-10,Cable Lat Pullover,1-Arm Lat Pull-in
+13,1,Pull,1,A2. Lat Static Stretch 30s,0,2,30s,,,
+14,1,Pull,1,Omni-Direction Face Pull,1,3,12-15,9-10,Reverse Cable Flye,Bent-Over Reverse DB Flye
+15,1,Pull,1,EZ-Bar Curl,1,3,6-8,9-10,DB Curl,Cable Curl
+16,1,Pull,1,Bottom-Half Preacher Curl,0,2,10-12,10,Bottom-Half Spider Curl,Bottom-Half Bayesian Curl
+17,1,Legs,1,Squat,3-4,1,2-4,8-9,DB Bulgarian Split Squat,Hack Squat
+18,1,Legs,1,Pause Squat,0,2,5,8-9,Pause DB Bulgarian Split Squat,Pause Hack Squat
+19,1,Legs,1,Barbell RDL,2,3,8-10,8-9,DB RDL,45-degree Hyperextension
+20,1,Legs,1,Walking Lunge,1,2,10,8-9,DB Step-up,Goblet Squat
+21,1,Legs,1,Seated Leg Curl,1,3,10-12,9-10,Lying Leg Curl,Nordic Ham Curl
+22,1,Legs,1,Leg Press Toe Press,1,4,10-12,9-10,Seated Calf Raise,Standing Calf Raise
+23,1,Legs,1,Decline Plate-Weighted Crunch,1,3,10-12,9-10,Cable Crunch,Machine Crunch
+24,1,Push,2,Close-Grip Barbell Incline Bench Press,2-3,3,8 5 12,8-9,Close-Grip DB Incline Press,Close-Grip Machine Chest Press
+25,1,Push,2,Machine Shoulder Press,2,3,10-12,8-9,Seated DB Shoulder Press,Standing DB Shoulder Press
+26,1,Push,2,Floor Skull Crusher,1,3,6-8,8-9,DB Floor Skullcrusher,Overhead Tricep Extension
+27,1,Push,2,Bent-Over Cable Pec Flye,1,3,10-12,9-10,Pec Deck,DB Flye
+28,1,Push,2,Cable Lateral Raise,1,3,5 15,9-10,DB Lateral Raise,Machine Lateral Raise
+29,1,Push,2,Plate Front Raise,1,2,10-15,9-10,DB Front Raise,Cable Front Raise
+30,1,Push,2,Diamond Push Up,0,1,AMRAP,10,Close-Grip Push-up,Kneeling Modified Push-up
+31,1,Pull,2,1-Arm Kneeling Lat Pulldown,1,3,12-15,8-9,1-Arm Lat Pull-In,Cable Lat Pullover
+32,1,Pull,2,Pull-UP,2,1,AMRAP,10,Latt Pulldown,Machine Pulldown
+33,1,Pull,2,Kroc Row,2,3,10-12,8-9,Single-Arm DB Row,Meadows Row
+34,1,Pull,2,Cable Shrug-in,1,3,10-12,9-10,DB Shrug,Plate Shrug
+35,1,Pull,2,Reverse Pec Deck,1,3,10-12,9-10,Reverse Cable Flye,Bent-Over Reverse DB Flye
+36,1,Pull,2,Cross-Body Cable Biceps Curl,1,3,10-12,9-10,DB Incline Curl,DB Curl
+37,1,Legs,2,Deadlift,3-4,1,5,8-9,Trap Bar Deadlift,Barbell Hip Thrust
+38,1,Legs,2,Stiff-Leg Deadlift,0,2,8,8-9,Barbell RDL,DB RDL
+39,1,Legs,2,Leg Press,2-3,4,10-12,8-9,Goblet Squat,Walking Lunge
+40,1,Legs,2,Glute Ham Raise,1,3,8-10,9-10,Nordim Ham Curl,Lying Leg Curl
+41,1,Legs,2,Slow-Eccentric Leg Extension,1,3,8-10,9-10,DB Step-Up,Goblet Squat
+42,1,Legs,2,Seated Calf Raise,1,4,12-20,9-10,Standing Calf Raise,Leg Press Toe Press
+43,1,Legs,2,Roman Chair Leg Raise,1,3,10-20,9-10,Hanging Leg Raise,Reverse Crunch
