@@ -75,10 +75,11 @@ class WorkoutPlan:
         workout_dict = {}
         for i in range(0, len(self.workout_plan)):
             workout_dict[i] = {'exercise': None}
+        #TODO: Fix this
         for i in range(0, self.max_sets + 1):
             for j in range(1, len(self.workout_plan)):
-                workout_dict[j][f'weight_{i}'] = None
-                workout_dict[j][f'reps_{i}'] = None
+                workout_dict[j][f'weight_{i+1}'] = None
+                workout_dict[j][f'reps_{i+1}'] = None
 
         workout_df = pd.DataFrame(workout_dict).T
         print(workout_df)
@@ -111,7 +112,7 @@ class WorkoutPlan:
         if not previous_workout.empty:
             workout = pd.concat([previous_workout, workout], ignore_index=True)
             workout = workout.drop_duplicates(subset=['person', 'week', 'split', 'day', 'exercise'], keep='last')
-        workout.to_csv(r'data/previous_workouts.csv', index=False)
+        workout.to_csv(r'src/data/previous_workouts.csv', index=False)
 
 
 def main():
@@ -138,6 +139,7 @@ def main():
     if st.button('Save workout'):
         workout_planner.save_workout(edited_workout, person, week, split, day)
 
+#TODO: edit dataframe shows data from latest workout
 
 if __name__ == '__main__':
     main()
