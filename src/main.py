@@ -28,7 +28,8 @@ class WorkoutPlan:
     def show_previous_workout(self, person, split, day):
         previous_workout = self.previous_workout
         try:
-            previous_workout.drop(['person', 'week', 'split', 'day'], axis=1, inplace=True).dropna(how='all', axis=1, inplace=True)
+            previous_workout.drop(['person', 'week', 'split', 'day'], axis=1, inplace=True)
+            previous_workout.dropna(how='all', axis=1, inplace=True)
             previous_workout = previous_workout[(previous_workout['person'] == person) & (previous_workout['split'] == split) & (previous_workout['day'] == day)]
         except KeyError:
             logger.error('Previous workout not found')
