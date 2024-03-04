@@ -46,7 +46,7 @@ class WorkoutPlan:
 
     def get_workout_plan(self, week, split, day):
         try:
-            df = pd.read_csv(r'data/workoutplan.csv')
+            df = pd.read_csv(r'src/data/workoutplan.csv')
             phase = self.get_phase(week)
             df = df[(df['week'] == phase) & (df['split'] == split) & (df['day'] == day)]
             self.workout_plan = df[['exercise', 'warm_up', 'sets', 'reps', 'rpe', 'alternative_1', 'alternative_2']]
