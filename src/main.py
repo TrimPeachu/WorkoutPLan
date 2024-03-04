@@ -141,5 +141,6 @@ def main():
 
 #TODO: edit dataframe shows data from latest workout
 
+
 if __name__ == '__main__':
     main()
