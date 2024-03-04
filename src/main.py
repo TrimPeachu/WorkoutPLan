@@ -18,7 +18,7 @@ class WorkoutPlan:
     def previous_workout(self):
         if self._previous_workout is None:
             try:
-                df = pd.read_csv(r'data/previous_workouts.csv')
+                df = pd.read_csv(r'src/data/previous_workouts.csv')
                 self._previous_workout = df
             except FileNotFoundError:
                 logger.info('No previous workouts found')
@@ -27,8 +27,12 @@ class WorkoutPlan:
 
     def show_previous_workout(self, person, split, day):
         previous_workout = self.previous_workout
-        previous_workout.drop(['person', 'week', 'split', 'day'], axis=1).dropna(how='all', axis=1)
-        previous_workout = previous_workout[(previous_workout['person'] == person) & (previous_workout['split'] == split) & (previous_workout['day'] == day)]
+        try:
+            previous_workout.drop(['person', 'week', 'split', 'day'], axis=1).dropna(how='all', axis=1)
+            previous_workout = previous_workout[(previous_workout['person'] == person) & (previous_workout['split'] == split) & (previous_workout['day'] == day)]
+        except KeyError:
+            logger.error('Previous workout not found')
+            previous_workout = pd.DataFrame()
         return previous_workout
 
     @staticmethod
@@ -41,11 +45,15 @@ class WorkoutPlan:
             return 3
 
     def get_workout_plan(self, week, split, day):
-        df = pd.read_csv(r'data/workoutplan.csv')
-        phase = self.get_phase(week)
-        df = df[(df['week'] == phase) & (df['split'] == split) & (df['day'] == day)]
-        self.workout_plan = df[['exercise', 'warm_up', 'sets', 'reps', 'rpe', 'alternative_1', 'alternative_2']]
-        self.max_sets = max(self.workout_plan['sets'])
+        try:
+            df = pd.read_csv(r'data/workoutplan.csv')
+            phase = self.get_phase(week)
+            df = df[(df['week'] == phase) & (df['split'] == split) & (df['day'] == day)]
+            self.workout_plan = df[['exercise', 'warm_up', 'sets', 'reps', 'rpe', 'alternative_1', 'alternative_2']]
+            self.max_sets = max(self.workout_plan['sets'])
+        except FileNotFoundError:
+            logger.error('Workout plan not found')
+            self.workout_plan = pd.DataFrame()
 
         return self.workout_plan
 
