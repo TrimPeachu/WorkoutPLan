@@ -28,7 +28,7 @@ class WorkoutPlan:
     def show_previous_workout(self, person, split, day):
         previous_workout = self.previous_workout
         try:
-            previous_workout.drop(['person', 'week', 'split', 'day'], axis=1).dropna(how='all', axis=1)
+            previous_workout.drop(['person', 'week', 'split', 'day'], axis=1, inplace=True).dropna(how='all', axis=1, inplace=True)
             previous_workout = previous_workout[(previous_workout['person'] == person) & (previous_workout['split'] == split) & (previous_workout['day'] == day)]
         except KeyError:
             logger.error('Previous workout not found')
@@ -82,10 +82,7 @@ class WorkoutPlan:
                 workout_dict[j][f'reps_{i+1}'] = None
 
         workout_df = pd.DataFrame(workout_dict).T
-        print(workout_df)
-        print(self.workout_plan)
         workout_df['exercise'] = self.workout_plan['exercise']
-        print(workout_df)
         edited_workout = st.data_editor(workout_df,
                                         hide_index=True,
                                         column_config={
