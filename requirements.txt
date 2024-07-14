@@ -1,4 +1,4 @@
 streamlit
 pandas
 st-gsheets-connection
-numpy
+numpy==1.26.4
